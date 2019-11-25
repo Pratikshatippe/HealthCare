@@ -6,7 +6,7 @@ import care from '../../images/care.png';
 
 export class Homepage extends Component{
     constructor(props){
-        super(props);
+        super();
     }
 
     render(){
