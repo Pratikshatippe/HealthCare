@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import './login.css';
-import logo from '../../images/Userlogo.png';
+// import logo from '../../images/Userlogo.png';
+
 
 export class Login extends Component{
     render(){
         return(
             <div className="main-content">
                 <div className="logo">
-                    <img src={logo} alt={""} className="Logo"/>
                 </div>
                 <div className="username">
                     <input type="text" placeholder="Username" className="userName"/>
