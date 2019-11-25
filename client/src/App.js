@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import './App.css';
 // import Homepage from './component/Homepage/homepage';
 // <Route path="/" component={Homepage} exact/>
-import Log from './component/LoginPage/login';
+// import Log from './component/LoginPage/login';
+// <Route  path="/login" component={Log}/>
+import Diseases from './component/Disease/diseases';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -11,7 +13,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route  path="/login" component={Log}/>
+        <Route  path="/disease" component={Diseases}/>
         </Switch>
       </Router>
     );
