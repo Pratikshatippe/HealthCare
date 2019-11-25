@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './login.css';
-// import logo from '../../images/Userlogo.png';
+import logo from '../../images/Userlogo.jpg';
 
 
 export class Login extends Component{
@@ -8,6 +8,7 @@ export class Login extends Component{
         return(
             <div className="main-content">
                 <div className="logo">
+                    <img src={logo} alt={""} className="userlogo"/>
                 </div>
                 <div className="username">
                     <input type="text" placeholder="Username" className="userName"/>

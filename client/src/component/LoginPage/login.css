@@ -2,11 +2,37 @@
     width: 100vw;
     height:100vh;
 }
-.logo,.username,.password,.login{
+.username,.password,.login{
     display: flex;
     justify-content: center;
     align-items: center;
+    height:10vh;
 }
-.passWord,.useName{
+.passWord,.userName{
+    text-align: center;
+    height: 6vh;
+    width:300px;
+    border-radius: 10px;
+    font-size: 24px;
+    border-color: black;
+}
+.userlogo{
+    margin-top: 24vh;
+    margin-bottom: 2vh;
     height: 20vh;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46vh;
+}
+.loginbtn{
+    background-color: #502CB2;
+    color: white;
+    border-radius: 15px;
+    width:200px;
+    height: 6vh;
+    font-size: 20px;
+    border-color: black;
 }
