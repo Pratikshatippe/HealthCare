@@ -1,0 +1,20 @@
+:root{
+    --color-1:#502CB2;
+}
+.base-container{
+    width:100vw;
+    height:100vh;
+    background-color: var(--color-1);
+}
+.health{
+    width:50vw;
+    height:30vh;
+}
+.mainLogo{
+    width:50vw;
+    height:40vh;
+}
+.care{
+    width:50vw;
+    height:30vh;
+}
