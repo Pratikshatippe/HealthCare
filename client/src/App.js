@@ -5,7 +5,9 @@ import './App.css';
 // <Route path="/" component={Homepage} exact/>
 // import Log from './component/LoginPage/login';
 // <Route  path="/login" component={Log}/>
-import Diseases from './component/Disease/diseases';
+// <Route  path="/disease" component={Diseases}/>
+// import Diseases from './component/Disease/diseases';
+import Rooms from './component/Rooms/room';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -13,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-        <Route  path="/disease" component={Diseases}/>
+        <Route  path="/rooms" component={Rooms}/>
         </Switch>
       </Router>
     );
