@@ -2,19 +2,31 @@
     --color-1:#502CB2;
 }
 .base-container{
-    width:100vw;
+    width:100%; 
     height:100vh;
-    background-color: var(--color-1);
+    background-color: var(--color-1); 
+    overflow:hidden;
 }
-.health{
+.stylehealth,.stylecare{
     width:50vw;
-    height:30vh;
+    height:25vh;
+}
+.stylemainlogo{
+    width:50vw;
+    height:50vh;
 }
 .mainLogo{
-    width:50vw;
-    height:40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.health{
+    display: flex-end;
+    justify-content: left;
+    align-items: center;
 }
 .care{
-    width:50vw;
-    height:30vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
