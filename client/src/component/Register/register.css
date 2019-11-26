@@ -1,0 +1,43 @@
+.main-content{
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+}
+.username,.password,.login,p,h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+}
+h1{
+    margin-top:10vh;
+}
+.passWord,.userName,.confirmPassWord{
+    text-align: center;
+    height: 6vh;
+    width:300px;
+    border-radius: 10px;
+    font-size: 18px;
+    border-color: black;
+}
+.registerlogo{
+    margin-bottom: 2vh;
+    height: 20vh;
+    border-radius: 70px;
+    border-color: black;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22vh;
+}
+.loginbtn{
+    background-color: #502CB2;
+    color: white;
+    border-radius: 15px;
+    width:200px;
+    height: 6vh;
+    font-size: 20px;
+    border-color: black;
+}
