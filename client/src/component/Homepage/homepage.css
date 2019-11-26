@@ -1,5 +1,5 @@
 :root{
-    --color-1:#502CB2;
+    --color-1:#D81B60;
 }
 .base-container{
     width:100%; 
@@ -7,26 +7,22 @@
     background-color: var(--color-1); 
     overflow:hidden;
 }
-.stylehealth,.stylecare{
-    width:50vw;
-    height:25vh;
-}
-.stylemainlogo{
-    width:50vw;
-    height:50vh;
-}
-.mainLogo{
+.health,.getstarted{
     display: flex;
     justify-content: center;
     align-items: center;
 } 
-.health{
-    display: flex-end;
-    justify-content: left;
-    align-items: center;
+.stylehealth{
+    margin-top: 10vh;
+    height: 70vh;
+    
 }
-.care{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.getstart{
+    border-color: black;
+    border-radius: 15px;
+    height: 8vh;
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
 }

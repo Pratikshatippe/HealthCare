@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import './homepage.css';
 import health from '../../images/health.png';
-import mainlogo from '../../images/mainLogo.png';
-import care from '../../images/care.png';
+import { Link } from 'react-router-dom';
 
 export class Homepage extends Component{
-    constructor(props){
-        super();
-    }
+    // constructor(props){
+    //     super();
+    // }
 
     render(){
         return(
@@ -15,12 +14,9 @@ export class Homepage extends Component{
                 <div className="health">
                     <img src={health} alt={""} className="stylehealth" />
                 </div>
-                <div className="mainLogo">
-                    <img src={mainlogo} alt={""} className="stylemainlogo" />
+                <div className="getstarted">
+                    <Link to='/login'><button className="getstart">Get Started</button></Link>
                 </div>
-                <div className="care">
-                    <img src={care} alt={""} className="stylecare" />
-                </div>  
             </div>
         )
     }
