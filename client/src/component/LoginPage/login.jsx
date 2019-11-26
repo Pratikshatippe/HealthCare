@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './login.css';
 import logo from '../../images/Userlogo.jpg';
+import { Link } from 'react-router-dom';
 
 
 export class Login extends Component{
@@ -22,15 +23,13 @@ export class Login extends Component{
     }
     submitForm(e){
         e.preventDefault()
-        const { username, password } = this.state
+        // const { username, password } = this.state
         // login magic
-        if(username === "A" && password ==="B"){
-
-        }
     }
     render(){
         return(
             <div className="main-content">
+                <h1>Login</h1>
                 <div className="logo">
                     <img src={logo} alt={""} className="userlogo"/>
                 </div>
@@ -44,6 +43,7 @@ export class Login extends Component{
                     <div className="login">
                         <input type="submit" className="loginbtn"/>
                     </div>
+                    <p><Link to='/register'>Create account? Register</Link></p>
                 </form>
             </div>
         )
