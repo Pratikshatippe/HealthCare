@@ -1,32 +1,41 @@
 import React, {Component} from 'react';
 import './login.css';
 import logo from '../../images/Userlogo.jpg';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 export class Login extends Component{
     constructor(props){
-        super(props)
+        super(props);
         let loggedIn = false
         this.state = {
             username:'',
             password:'',
             loggedIn
-        }
-        this.onChange = this.onChange.bind(this)
-        this.submitForm = this.submitForm.bind(this)
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.submitForm = this.submitForm.bind(this);
     }
-    onChange(e){
+    handleChange(e){
+        const {name,value} = e.target
         this.setState({
-            [e.target.value]:e.target.value
+            [name]:value
         });
     }
     submitForm(e){
-        e.preventDefault()
-        // const { username, password } = this.state
+        e.preventDefault();
+        const { username, password } = this.state
         // login magic
+        if(username === "chinu" && password === "chinu"){
+            this.setState({
+                loggedIn: true
+            });
+        }
     }
     render(){
+        if(this.state.loggedIn){
+            return <Redirect to='/disease'/>
+        }
         return(
             <div className="main-content">
                 <h1>Login</h1>
@@ -35,10 +44,10 @@ export class Login extends Component{
                 </div>
                 <form onSubmit={this.submitForm}>
                     <div className="username">
-                        <input type="text" placeholder="username" name="username" className="userName" value={this.state.username} onChange={this.onChange}/>
+                        <input type="text" placeholder="username" name="username" className="userName" value={this.state.username} onChange={this.handleChange}/>
                     </div>
                     <div className="password">
-                        <input type="password" placeholder="password" name="password" className="passWord" value={this.state.password} onChange={this.onChange}/>
+                        <input type="password" placeholder="password" name="password" className="passWord" value={this.state.password} onChange={this.handleChange}/>
                     </div>
                     <div className="login">
                         <input type="submit" className="loginbtn"/>

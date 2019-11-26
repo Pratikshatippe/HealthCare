@@ -22,7 +22,8 @@ h1{
     width:300px;
     border-radius: 10px;
     font-size: 24px;
-    border-color: black;
+    border:1px solid black;
+    outline: none;
 }
 .diseaselogo{
     margin-bottom: 2vh;
@@ -35,11 +36,13 @@ h1{
     height: 26vh;
 }
 .addDisease{
-    background-color: #502CB2;
+    background-color: #D81B60;
     color: white;
     border-radius: 15px;
     width:200px;
     height: 6vh;
     font-size: 20px;
-    border-color: black;
+    border:1px solid black;
+    outline: none;
+    cursor: pointer;
 }
