@@ -2,30 +2,33 @@
     width: 100vw;
     height:100vh;
 }
-.username,.password,.login{
+.username,.password,.login,p{
     display: flex;
     justify-content: center;
     align-items: center;
     height:10vh;
+}
+h1{
+    margin-top:10vh;
 }
 .passWord,.userName{
     text-align: center;
     height: 6vh;
     width:300px;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 18px;
     border-color: black;
 }
 .userlogo{
-    margin-top: 24vh;
     margin-bottom: 2vh;
     height: 20vh;
+    border-radius: 70px;
 }
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 46vh;
+    height: 22vh;
 }
 .loginbtn{
     background-color: #502CB2;
