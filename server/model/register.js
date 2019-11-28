@@ -15,4 +15,4 @@ const UserInfoSchema = new mongoose.Schema({
     }
 });
 
-module.exports = patient = mongoose.model('registration',UserInfoSchema);
+module.exports = Patient = mongoose.model('registration',UserInfoSchema);
