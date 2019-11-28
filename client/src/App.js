@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-// import logo from './logo.svg';
 import './App.css';
+// import components
 import Homepage from './component/Homepage/homepage';
-
 import Log from './component/LoginPage/login';
 import Diseases from './component/Disease/diseases';
-// import Rooms from './component/Rooms/room'
-// <Route  path="/rooms" component={Rooms}/>
-import Register from './component/Register/register'
+import Rooms from './component/Rooms/room';
+import Register from './component/Register/register';
+
+// import router in react
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -20,6 +20,7 @@ class App extends Component {
             <Route  path="/login" component={Log}/>
             <Route  path="/register" component={Register}/>
             <Route  path="/disease" component={Diseases}/>
+            <Route  path="/rooms" component={Rooms}/>
           </Switch>
         </div>
       </Router>
