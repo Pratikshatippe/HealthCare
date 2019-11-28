@@ -18,7 +18,7 @@ mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
 console.log("connect");
 
 // set path for router file
-app.use('/', require('./routes/api/userinfo'));
+app.use('/', require('./routes/api/doctorlist'));
  
 // listening port
 app.listen(port, () => {
