@@ -1,5 +1,5 @@
 const express =require('express');
-const uri = "mongodb+srv://pratiksha:rBBM2fscP3UQnk4H@cluster0-8sqx5.mongodb.net/Servicer?retryWrites=true&w=majority";
+const uri = "mongodb+srv://pratiksha:rBBM2fscP3UQnk4H@cluster0-8sqx5.mongodb.net/hospital?retryWrites=true&w=majority";
 const app = express();
 const port = 8800;
 const mongoose = require('mongoose');
