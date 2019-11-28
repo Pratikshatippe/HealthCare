@@ -12,5 +12,6 @@ const diseaseSchema = new mongoose.Schema({
         required:true
     }
 });
+diseaseSchema.set('collection','diseases');
 
-module.exports = Disease = mongoose.model('diaseases', diseaseSchema);
+module.exports = Disease = mongoose.model('diseases', diseaseSchema);
