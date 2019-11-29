@@ -6,6 +6,7 @@ import Log from './component/LoginPage/login';
 import Diseases from './component/Disease/diseases';
 import Rooms from './component/Rooms/room';
 import Register from './component/Register/register';
+import Doctor from './component/Doctor/doctor';
 
 // import router in react
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -21,6 +22,7 @@ class App extends Component {
             <Route  path="/register" component={Register}/>
             <Route  path="/disease" component={Diseases}/>
             <Route  path="/rooms" component={Rooms}/>
+            <Route  path="/doctor" component={Doctor}/>
           </Switch>
         </div>
       </Router>
