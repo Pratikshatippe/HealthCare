@@ -9,7 +9,7 @@ const Doctor = require('../../model/doctor');
 router.get('/doctor',(req, res) =>{
     Doctor.find({})
     .then(result=>{
-        console.log(result);
+        res.send(result);
     })
 })
 
