@@ -3,12 +3,17 @@ import './doctor.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export class Doctor extends Component{
     constructor(){
         super()
         this.state={
-            doctor:[]
+            doctor:[
+                {
+                    Designation:"" 
+                }
+            ]
             // Designation:'',
             // Experience:'',
             // Degree:'',
@@ -16,11 +21,12 @@ export class Doctor extends Component{
         }
         this.handleShow=this.handleShow.bind(this)
     }  
-    handleShow(){
+    handleShow(e){
+        e.preventDefault()
         axios.get('http://localhost:8800/doctor')
         .then(response=>{
                 console.log(response.data);
-                this.setState({doctor:response.data});
+                this.setState({doctor:response.data[0].Designation});
             });
         }
 
@@ -30,23 +36,13 @@ export class Doctor extends Component{
                 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                     <Navbar.Brand href="#home">Health Care</Navbar.Brand>
                     <Form inline>
-                        <Button variant="outline-success" className="mr-sm-2">Logout</Button>
+                        <Link to="/login"><Button variant="outline-success" className="mr-sm-2">Logout</Button></Link>
                     </Form>
                 </Navbar>
                 <div className="main">
                     <h1>Doctor Details</h1>
                     <div><button onClick={this.handleShow}>show</button></div>
-                    {this.state.map(i => {
-                        return(
-                            <div>
-                                <p>{i.Name}</p>
-                                <p>{i.Designation}</p>
-                                <p>{i.Experience}</p>
-                                <p>{i.Degree}</p>
-                                <p>{i.CabinNo}</p>
-                            </div>
-                        )
-                    })}
+                    <p>{this.state.Doctor}</p>
                 </div>
             </form>
         )

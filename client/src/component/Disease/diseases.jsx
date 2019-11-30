@@ -3,15 +3,16 @@ import './diseases.css';
 import disease from '../../images/disease.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 export class Diseases extends Component{
     render(){
         return(
             <form>
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" id="nav">
                     <Navbar.Brand href="#home">Health Care</Navbar.Brand>
                     <Form inline>
-                        <Button variant="outline-success" className="mr-sm-2">Logout</Button>
+                        <Link to="/login"><Button variant="outline-success" className="mr-sm-2">Logout</Button></Link>
                     </Form>
                 </Navbar>
                 <div className="main-content">

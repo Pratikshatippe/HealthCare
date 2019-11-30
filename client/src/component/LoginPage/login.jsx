@@ -26,7 +26,7 @@ export class Login extends Component{
         e.preventDefault();
         const { username, password } = this.state
         // login magic
-        if(username === "chinu" && password === "chinu"){
+        if(username === "Demo" && password === "Demo123"){
             this.setState({
                 loggedIn: true
             });

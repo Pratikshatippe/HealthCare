@@ -4,6 +4,7 @@ import patient from '../../images/patient.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Form, Button } from 'react-bootstrap';
 import free from '../../images/free.jpg';
+import { Link } from 'react-router-dom';
 
 export class Rooms extends Component{
     render(){
@@ -12,7 +13,7 @@ export class Rooms extends Component{
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Navbar.Brand href="#home">Health Care</Navbar.Brand>
                 <Form inline>
-                    <Button variant="outline-success" className="mr-sm-2">Logout</Button>
+                    <Link to="/login"><Button variant="outline-success" className="mr-sm-2">Logout</Button></Link>
                 </Form>
             </Navbar>
             
