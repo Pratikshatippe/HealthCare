@@ -10,4 +10,4 @@ Pratiksha Tippe
 * ExpressJs
 * NodeJS
 ## Design
-![sceenshot](./client/src/images/Healthcare.png)
+![sceenshot](./client/src/images/healthcare.png)
