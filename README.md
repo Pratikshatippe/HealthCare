@@ -13,3 +13,8 @@ Username: Demo and Password: Demo123
 * NodeJS
 ## Design
 ![sceenshot](./client/src/images/healthcare.png)
+## Screenshots
+![sceenshot](./client/src/images/homepage.png)
+![sceenshot](./client/src/images/login.png)
+![sceenshot](./client/src/images/registerp.png)
+![sceenshot](./client/src/images/diseasep.png)
