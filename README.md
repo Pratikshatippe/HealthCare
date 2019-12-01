@@ -11,8 +11,6 @@ Username: Demo and Password: Demo123
 * MongoDB
 * ExpressJs
 * NodeJS
-## Design
-![sceenshot](./client/src/images/healthcare.png)
 ## Screenshots
 ![sceenshot](./client/src/images/homepage.png)
 ![sceenshot](./client/src/images/login.png)
