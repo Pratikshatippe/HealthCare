@@ -13,12 +13,17 @@ export class UserInput extends Component{
             selectedOption:''
         }
         this.handleChange=this.handleChange.bind(this);
-        
+        this.onSiteChanged=this.onSiteChanged.bind(this);
     }
     handleChange(e){
         const {name,value} = e.target
         this.setState({
             [name]:value
+        });
+    }
+    onSiteChanged(e){
+        this.setState({
+          selectedOption: e.currentTarget.value
         });
     }
     render(){
@@ -37,8 +42,8 @@ export class UserInput extends Component{
                     </div>
                     <div className="gender">
                         <label>Gender:</label>
-                        <input type="radio" value="Female" checked={this.state.selectedOption === 'Female'}/>Female
-                        <input type="radio" value="Male" checked={this.state.selectedOption === 'Male'}/>Male
+                        <input type="radio" value="Female" checked={this.state.selectedOption === 'Female'} onChange={this.onSiteChanged}/>Female
+                        <input type="radio" value="Male" checked={this.state.selectedOption === 'Male'} onChange={this.onSiteChanged}/>Male
                     </div>
                     <div className="Adddisease">
                         <Link to="/disease"><button className="AddDisease">Add Disease</button></Link>
