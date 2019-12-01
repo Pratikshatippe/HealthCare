@@ -7,8 +7,9 @@ const Doctor = require('../../model/doctor');
 //@description      This route for fetch doctor list
 
 router.get('/doctor',(req, res) =>{
-    Doctor.find({})
+    Doctor.findOne({})
     .then(result=>{
+        console.log(result);
         res.send(result);
     })
 })
