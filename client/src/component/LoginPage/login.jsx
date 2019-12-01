@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './login.css';
 import logo from '../../images/Userlogo.jpg';
 import { Link, Redirect } from 'react-router-dom';
-
+import axios from 'axios';
 
 export class Login extends Component{
     constructor(props){
@@ -26,15 +26,25 @@ export class Login extends Component{
         e.preventDefault();
         const { username, password } = this.state
         // login magic
-        if(username === "Demo" && password === "Demo123"){
-            this.setState({
-                loggedIn: true
-            });
-        }
+        axios.get('http://localhost:8800/login')
+            .then(user=>{
+                console.log(user.data);
+                const u = user.data;
+                u.forEach(element => {
+                    console.log(element.username);
+                    if(username === element.username && password === element.password){
+                        this.setState({
+                            loggedIn: true
+                        });
+                    }
+                });
+
+            })
+        
     }
     render(){
         if(this.state.loggedIn){
-            return <Redirect to='/disease'/>
+            return <Redirect to='/userInput'/>
         }
         return(
             <div className="main-content">
