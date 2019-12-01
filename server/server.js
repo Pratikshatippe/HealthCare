@@ -19,6 +19,7 @@ console.log("connect");
 
 // set path for router file
 app.use('/', require('./routes/api/doctorlist'));
+app.use('/', require('./routes/api/userRegister'));
 app.use('/patient', require('./routes/api/disease'));
 app.use('/register', require('./routes/api/userRegister'));
  
