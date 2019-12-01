@@ -27,7 +27,7 @@ export class Diseases extends Component{
                         <input type="text" placeholder="Remark" className="Remark"/>
                     </div>
                     <div className="adddisease">
-                        <button className="addDisease">Add Disease</button>
+                        <Link to="userInput"><button className="addDisease">Add Disease</button></Link>
                     </div>
                 </div>
             </form>
