@@ -11,13 +11,13 @@ export class Doctor extends Component{
         this.state={
             doctor:[
                 {
-                    Designation:"" 
+                    Name:"",
+                    Designation:"" ,
+                    Experience:"",
+                    Degree:"",
+                    CabinNo:""
                 }
             ]
-            // Designation:'',
-            // Experience:'',
-            // Degree:'',
-            // CabinNo:''
         }
         this.handleShow=this.handleShow.bind(this)
     }  
@@ -25,8 +25,7 @@ export class Doctor extends Component{
         e.preventDefault()
         axios.get('http://localhost:8800/doctor')
         .then(response=>{
-                console.log(response.data);
-                this.setState({doctor:response.data[0].Designation});
+                this.setState({doctor:response.data});
             });
         }
 
@@ -42,7 +41,11 @@ export class Doctor extends Component{
                 <div className="main">
                     <h1>Doctor Details</h1>
                     <div><button onClick={this.handleShow}>show</button></div>
-                    <p>{this.state.Doctor}</p>
+                    <p>Name:{this.state.doctor.Name}</p>
+                    <p>Designation:{this.state.doctor.Designation}</p>
+                    <p>Experience:{this.state.doctor.Experience}</p>
+                    <p>Degree:{this.state.doctor.Degree}</p>
+                    <p>CabinNo:{this.state.doctor.CabinNo}</p>
                 </div>
             </form>
         )
