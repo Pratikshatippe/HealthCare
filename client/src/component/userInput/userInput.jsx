@@ -37,13 +37,13 @@ export class UserInput extends Component{
                 </Navbar>
                 <div className="user">
                     <div className="Patientname">
-                        <label>Username: </label>
+                        <h4><label>Username: </label></h4>
                         <input type="text" className="patientname" name="patientname" onChange={this.handleChange}/>
                     </div>
                     <div className="gender">
-                        <label>Gender:</label>
-                        <input type="radio" value="Female" checked={this.state.selectedOption === 'Female'} onChange={this.onSiteChanged}/>Female
-                        <input type="radio" value="Male" checked={this.state.selectedOption === 'Male'} onChange={this.onSiteChanged}/>Male
+                        <h4><label>Gender:</label></h4>
+                        <input type="radio" className="female" value="Female" checked={this.state.selectedOption === 'Female'} onChange={this.onSiteChanged}/><h6>Female</h6>
+                        <input type="radio" className="male" value="Male" checked={this.state.selectedOption === 'Male'} onChange={this.onSiteChanged}/><h6>Male</h6>
                     </div>
                     <div className="Adddisease">
                         <Link to="/disease"><button className="AddDisease">Add Disease</button></Link>
