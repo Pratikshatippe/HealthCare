@@ -12,8 +12,8 @@ app.use(bodyparser.json());
 
 // mongoose connection estblished
 mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
-                    .then(() => console.log('Connected to MongoDB Successfully......'))
-                    .catch(err => console.log('Error occured while connecting MongoDB '+err));
+    .then(() => console.log('Connected to MongoDB Successfully......'))
+    .catch(err => console.log('Error occured while connecting MongoDB '+err));
 
 console.log("connect");
 

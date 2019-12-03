@@ -28,11 +28,13 @@ export class Login extends Component{
         // login magic
         axios.get('http://localhost:8800/login')
             .then(user=>{
-                console.log(user.data);
+                // console.log(user.data);
                 const u = user.data;
                 u.forEach(element => {
-                    console.log(element.username);
-                    if(username === element.username && password === element.password){
+                    if(!(username === element.username && password === element.password)){   
+                        console.log("please register");
+                    }
+                    else{
                         this.setState({
                             loggedIn: true
                         });
@@ -40,7 +42,7 @@ export class Login extends Component{
                 });
 
             })
-        
+
     }
     render(){
         if(this.state.loggedIn){
